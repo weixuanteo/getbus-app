@@ -3,5 +3,12 @@ body {
     padding: 0;
     font-family: "Circular Std", "sans-serif";
     background: #3bad6f;
-    background-image: linear-gradient(to right, #3bad6f, #019a8e)
-  }
+    background-image: linear-gradient(to bottom, #3bad6f, #019a8e);
+    background-attachment: fixed;
+    height: 100%;
+}
+
+@font-face {
+    font-family: CircularStd-Book;
+    src: url('/assets/fonts/CircularStd-Book.otf')
+}
