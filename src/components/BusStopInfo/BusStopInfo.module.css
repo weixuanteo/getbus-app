@@ -1,0 +1,13 @@
+.BusStopInfoLabel {
+    text-align: center;
+}
+
+.BusStopCodeLabel {
+    font-weight: bold;
+    font-size: 12px
+}
+
+.BusStopNameLabel {
+    font-weight: bold;
+    font-size: 18px;
+}
