@@ -1,0 +1,30 @@
+.WAB {
+    height: 13px;
+    width: 13px;
+}
+
+.BusNum {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.Destination {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.BusType {
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+}
+
+.EtaTime {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    align-items: center;
+}

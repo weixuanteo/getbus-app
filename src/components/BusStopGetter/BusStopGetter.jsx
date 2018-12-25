@@ -18,7 +18,7 @@ const styles = theme => ({
         width: '145px',
         fontSize: 11,
         fontWeight: 'bold',
-        fontFamily: ['"Circular Std"', '"sans-serif"'].join(','),
+        fontFamily: ['"Roboto"', '"sans-serif"'].join(','),
         position: 'relative',
         top: 42
     },
@@ -51,7 +51,7 @@ const busStopGetter = (props) => {
     const {classes, className} = props;
 
    return (
-       <div>
+       <div className={cssmod.BusStopGetter}>
            <div className={cssmod.Logo}>
                <Link to='/'>
                    <Logo />
@@ -61,12 +61,19 @@ const busStopGetter = (props) => {
                       placeholder="Input Bus Stop Code"
                       margin="normal"
                       variant="outlined"
+                      value={props.value}
+                      onChange={props.changed}
                       InputProps={{classes: {input: classes.inputPlaceholder}}}
            />
-           <div>
-           <Button className={classNames(classes.submitButton, className)}
-                   variant="text"
-                   color="primary">SUBMIT</Button>
+           <div className={cssmod.Submit}>
+               <Link to={{
+                   pathname: "/arrival",
+                   search: "?code=" + props.busStopCode
+               }}>
+                   <Button className={classNames(classes.submitButton, className)}
+                           variant="text"
+                           color="primary">SUBMIT</Button>
+               </Link>
            </div>
        </div>
    )

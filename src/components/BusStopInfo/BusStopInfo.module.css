@@ -1,13 +1,17 @@
 .BusStopInfoLabel {
     text-align: center;
+    color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
 }
 
 .BusStopCodeLabel {
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    font-size: 12px
+    font-size: 14px
 }
 
 .BusStopNameLabel {
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 17px;
 }

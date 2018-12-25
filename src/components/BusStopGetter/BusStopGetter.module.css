@@ -2,3 +2,12 @@
     position: relative;
     margin-top: 140px;
 }
+
+.BusStopGetter {
+    text-align: center;
+}
+
+.Submit {
+    color: inherit;
+    text-decoration: none;
+}
