@@ -18,6 +18,11 @@ class Arrival extends Component {
         stopName: "",
         services: []
     }
+
+    getStopName(busStopCode) {
+        return axiosstop.get(busStopCode + '.json')
+    }
+
     componentDidMount() {        
         let busData = {
             busStopCode: null
@@ -38,12 +43,12 @@ class Arrival extends Component {
                 // handle error here
                 console.log(error)
             })
-
-        axiosstop.get(busData.busStopCode + '.json')
+        
+        this.getStopName(busData.busStopCode)
             .then(res => {
-                console.log(res)
-                console.log(res.data)
-                this.setState({stopName: res.data.Description})
+            console.log(res)
+            console.log(res.data)
+            this.setState({stopName: res.data.Description})
             })
             .catch(error => {
                 //handle error here
@@ -77,9 +82,21 @@ class Arrival extends Component {
                         <BusArrivalInfo
                             busNo={i.serviceNo}
                             dest={i.nextBus.destinationCode}
-                            load={true}
+                            load={i.nextBus.load}
                             busType={i.nextBus.type}
                             etaTime={i.nextBus.estimatedArrival}
+
+                            busNo2={i.serviceNo}
+                            dest2={i.nextBus2.destinationCode}
+                            load2={i.nextBus2.load}
+                            busType2={i.nextBus2.type}
+                            etaTime2={i.nextBus2.estimatedArrival}
+                            
+                            busNo3={i.serviceNo}
+                            dest3={i.nextBus3.destinationCode}
+                            load3={i.nextBus3.load}
+                            busType3={i.nextBus3.type}
+                            etaTime3={i.nextBus3.estimatedArrival}
                         />
                     ))}
                 </div>

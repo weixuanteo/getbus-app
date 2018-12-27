@@ -14,7 +14,15 @@ const styles = theme => ({
         flexGrow: 1,
     },
     eta: {
-        display: 'flex',
+        width: '70px',
+        textAlign: 'center',
+    },
+    busNum: {
+        width: '420px',
+    },
+    status: {
+        width: '80px',
+        textAlign: 'center',
     }
 })
 
@@ -22,8 +30,8 @@ const busDetail = (props) => {
     const { classes, className } = props;
 
     return (
-        <Grid container className={classes.root} spacing={16}>
-            <Grid item xs={4}>
+        <Grid container className={classes.root}>
+            <Grid item className={classes.busNum} xs={4}>
                 <div className={cssmod.BusNum}>
                     <span>{props.busNum}</span>
                 </div>
@@ -31,13 +39,13 @@ const busDetail = (props) => {
                     {props.destination}
                 </div>
             </Grid>
-            <Grid item xs={4} style={{padding: 12}} >
+            <Grid item xs={0} className={classes.status}>
                 <div className={cssmod.BusType}>
-                    <span><LoadStatus load={props.load}/></span>
+                    <LoadStatus load={props.load}/>
                     <span>{props.busType}</span>
                 </div>
             </Grid>
-            <Grid item xs={4} className={classes.eta}>
+            <Grid item xs={0} className={classes.eta}>
                 <div className={cssmod.EtaTime}>
                     {props.etaTime}
                 </div>

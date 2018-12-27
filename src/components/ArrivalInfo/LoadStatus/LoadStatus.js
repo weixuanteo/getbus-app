@@ -1,21 +1,25 @@
 import React from 'react';
 
-import classes from './LoadStatus.css';
+import classes from './LoadStatus.module.css'
 
 const loadStatus = (props) => {
-    if (props.load === true) {
+    const load = props.load
+    if (load === "SEA") {
         return (
-            <div>
-                <span className={classes.Red}></span>
-            </div>
-        )
-    } else {
-        return (
-            <div>
                 <span className={classes.Green}></span>
-            </div>
         )
     }
+    if (load === "SDA") {
+        return (
+                <span className={classes.Orange}></span>
+        )
+    }
+    if (load === "LSD") {
+        return (
+                <span className={classes.Red}></span>
+        )
+    }
+    return <span></span>
 }
 
 export default loadStatus;

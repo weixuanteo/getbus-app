@@ -1,0 +1,20 @@
+.Green {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: green;
+}
+
+.Orange {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: orangered;
+}
+
+.Red {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background: red;
+}
