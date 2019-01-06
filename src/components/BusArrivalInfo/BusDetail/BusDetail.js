@@ -41,8 +41,10 @@ const busDetail = (props) => {
             </Grid>
             <Grid item xs={0} className={classes.status}>
                 <div className={cssmod.BusType}>
-                    <LoadStatus load={props.load}/>
                     <span>{props.busType}</span>
+                </div>
+                <div className={cssmod.LoadStatus}>
+                    <LoadStatus load={props.load}/>
                 </div>
             </Grid>
             <Grid item xs={0} className={classes.eta}>

@@ -1,20 +1,23 @@
 .Green {
-    height: 14px;
-    width: 14px;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     background: green;
+    position: absolute;
 }
 
 .Orange {
-    height: 14px;
-    width: 14px;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     background: orangered;
+    position: absolute;
 }
 
 .Red {
-    height: 14px;
-    width: 14px;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     background: red;
+    position: absolute;
 }
