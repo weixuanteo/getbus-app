@@ -20,13 +20,13 @@
     font-size: 12px;
     font-weight: bold;
     color: gray;
+    padding-bottom: 5px;
 }
 
 .LoadStatus {
     position: absolute;
     text-align: center;
     left: 190px;
-    top: 35px;
 }
 
 .EtaTime {
