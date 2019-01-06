@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import Aux from '../../hoc/Aux';
 import BusStopInfo from '../../components/BusStopInfo/BusStopInfo';
 import Logo from '../../components/Logo/Logo'
+import RefreshButton from '../../components/Controls/RefreshButton/RefreshButton';
 import classes from './Arrival.module.css';
 import axiosbus from '../../axios-bus';
 import axiosstop from '../../axios-stop';
@@ -56,6 +57,10 @@ class Arrival extends Component {
             })
     }
 
+    refreshHandler = () => {
+        window.location.reload()
+    }
+
     render() {
         console.log(this.state.stopCode)
         let top = (
@@ -100,6 +105,7 @@ class Arrival extends Component {
                         />
                     ))}
                 </div>
+                <RefreshButton refreshHandler={this.refreshHandler}/>
             </Aux>
         )
     }
