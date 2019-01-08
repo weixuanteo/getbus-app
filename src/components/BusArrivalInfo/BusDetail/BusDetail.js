@@ -1,13 +1,11 @@
 import React from 'react';
 
-import WAB from '../../ArrivalInfo/WAB/WAB';
+import WabSymbol from '../../ArrivalInfo/WAB/WAB';
 import classNames from 'classnames';
 import LoadStatus from '../../ArrivalInfo/LoadStatus/LoadStatus';
 import cssmod from './BusDetail.module.css';
 import { withStyles } from "@material-ui/core/styles";
 import Grid from '@material-ui/core/Grid'
-
-//TODO add logic to WAB
 
 const styles = theme => ({
     root: {
@@ -23,6 +21,9 @@ const styles = theme => ({
     status: {
         width: '80px',
         textAlign: 'center',
+    },
+    wab: {
+        paddingLeft: '5px',
     }
 })
 
@@ -34,6 +35,7 @@ const busDetail = (props) => {
             <Grid item className={classes.busNum} xs={4}>
                 <div className={cssmod.BusNum}>
                     <span>{props.busNum}</span>
+                    <span className={classes.wab}><WabSymbol wab={props.wab}/></span>
                 </div>
                 <div className={cssmod.Destination}>
                     {props.destination}

@@ -55,6 +55,7 @@ class BusArrivalInfo extends Component {
                         load={this.props.load}
                         busType={this.props.busType}
                         etaTime={this.props.etaTime}
+                        wab={this.props.wab}
                     />
                 </CardContent>
                 <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
@@ -65,6 +66,7 @@ class BusArrivalInfo extends Component {
                         load={this.props.load2}
                         busType={this.props.busType2}
                         etaTime={this.props.etaTime2}
+                        wab={this.props.wab2}
                     />
                     <div className={classes.padSpacing}></div>
                     <BusDetail
@@ -73,6 +75,7 @@ class BusArrivalInfo extends Component {
                         load={this.props.load3}
                         busType={this.props.busType3}
                         etaTime={this.props.etaTime3}
+                        wab={this.props.wab3}
                     />
                     </CardContent>
                 </Collapse>

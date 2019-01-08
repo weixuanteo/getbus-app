@@ -1,12 +1,16 @@
 import React from 'react';
 
-import wabIcon from '../../../assets/images/wheelchair-access.png';
+import WabIcon from '@material-ui/icons/Accessible';
 import classes from './WAB.css';
 
-const wab = (props) => (
-    <div className={classes.wabIcon}>
-        <img src={wabIcon} alt="WAB" style={{height: props.height}}/>
-    </div>
-)
+const wabSymbol = (props) => {
+    const access = props.wab
+    if (access === "WAB") {
+        return (
+            <WabIcon className={classes.wab} color="primary" fontSize="small"/>
+        )
+    }
+    return <span></span>
+}
 
-export default wab;
+export default wabSymbol;

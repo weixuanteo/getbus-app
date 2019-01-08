@@ -90,18 +90,21 @@ class Arrival extends Component {
                             load={i.nextBus.load}
                             busType={i.nextBus.type}
                             etaTime={i.nextBus.estimatedArrival}
+                            wab={i.nextBus.feature}
 
                             busNo2={i.serviceNo}
                             dest2={i.nextBus2.destinationCode}
                             load2={i.nextBus2.load}
                             busType2={i.nextBus2.type}
                             etaTime2={i.nextBus2.estimatedArrival}
+                            wab2={i.nextBus2.feature}
                             
                             busNo3={i.serviceNo}
                             dest3={i.nextBus3.destinationCode}
                             load3={i.nextBus3.load}
                             busType3={i.nextBus3.type}
                             etaTime3={i.nextBus3.estimatedArrival}
+                            wab3={i.nextBus3.feature}
                         />
                     ))}
                 </div>
