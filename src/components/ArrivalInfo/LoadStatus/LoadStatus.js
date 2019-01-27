@@ -11,7 +11,7 @@ const loadStatus = (props) => {
     }
     if (load === "SDA") {
         return (
-                <span className={classes.Orange}></span>
+                <span className={classes.Yellow}></span>
         )
     }
     if (load === "LSD") {
