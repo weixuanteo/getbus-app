@@ -1,7 +1,6 @@
 import React from 'react';
 
 import WabSymbol from '../../ArrivalInfo/WAB/WAB';
-import classNames from 'classnames';
 import LoadStatus from '../../ArrivalInfo/LoadStatus/LoadStatus';
 import cssmod from './BusDetail.module.css';
 import { withStyles } from "@material-ui/core/styles";
@@ -28,7 +27,7 @@ const styles = theme => ({
 })
 
 const busDetail = (props) => {
-    const { classes, className } = props;
+    const { classes } = props;
 
     return (
         <Grid container className={classes.root}>

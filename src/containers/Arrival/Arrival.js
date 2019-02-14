@@ -21,7 +21,7 @@ class Arrival extends Component {
     }
 
     getStopName(busStopCode) {
-        return axiosstop.get(busStopCode + '.json')
+        return axiosstop.get("stops/" + busStopCode + '.json')
     }
 
     componentDidMount() {        

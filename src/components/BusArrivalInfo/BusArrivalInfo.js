@@ -43,6 +43,33 @@ class BusArrivalInfo extends Component {
 
     render() {
         const {classes, className} = this.props;
+        let bus2Comp, bus3Comp;
+
+        if (this.props.etaTime2 !== "") {
+            bus2Comp = (
+                <BusDetail
+                busNum={this.props.busNo2}
+                destination={this.props.dest2}
+                load={this.props.load2}
+                busType={this.props.busType2}
+                etaTime={this.props.etaTime2}
+                wab={this.props.wab2}
+            />
+            )
+        }
+
+        if (this.props.etaTime3 !== "") {
+            bus3Comp = (
+                <BusDetail
+                busNum={this.props.busNo3}
+                destination={this.props.dest3}
+                load={this.props.load3}
+                busType={this.props.busType3}
+                etaTime={this.props.etaTime3}
+                wab={this.props.wab3}
+            />
+            )
+        }
 
         return (
             <div className={classNames(classes.mainComp, className)}>
@@ -60,23 +87,9 @@ class BusArrivalInfo extends Component {
                 </CardContent>
                 <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
                     <CardContent className={classes.expandedSpacing}>
-                    <BusDetail
-                        busNum={this.props.busNo2}
-                        destination={this.props.dest2}
-                        load={this.props.load2}
-                        busType={this.props.busType2}
-                        etaTime={this.props.etaTime2}
-                        wab={this.props.wab2}
-                    />
+                        {bus2Comp}
                     <div className={classes.padSpacing}></div>
-                    <BusDetail
-                        busNum={this.props.busNo3}
-                        destination={this.props.dest3}
-                        load={this.props.load3}
-                        busType={this.props.busType3}
-                        etaTime={this.props.etaTime3}
-                        wab={this.props.wab3}
-                    />
+                        {bus3Comp}
                     </CardContent>
                 </Collapse>
                 </ButtonBase>
