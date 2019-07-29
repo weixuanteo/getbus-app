@@ -1,0 +1,27 @@
+/* @r: 30px;
+@color: #f0f0f0;
+@duration: 2s; */
+.center {
+    width: 30px;
+    height: 30px;
+    background-color: #f0f0f0;
+    border-radius: 100%;
+    position: relative;
+}
+.center::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color: #f0f0f0;
+    animation: center 2s infinite;
+}
+
+@keyframes center {
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+

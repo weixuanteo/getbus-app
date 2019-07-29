@@ -6,6 +6,7 @@ import Logo from '../Logo/Logo'
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 import cssmod from './BusStopGetter.module.css';
 
 const styles = theme => ({
@@ -21,6 +22,19 @@ const styles = theme => ({
         fontFamily: ['"Roboto"', '"sans-serif"'].join(','),
         position: 'relative',
         top: 42
+    },
+    nearbyButton: {
+        background: '#06575B',
+        borderRadius: 5,
+        border: 0,
+        color: '#F8F8F8',
+        height: '30px',
+        width: '145px',
+        fontSize: 11,
+        fontWeight: 'bold',
+        fontFamily: ['"Roboto"', '"sans-serif"'].join(','),
+        position: 'relative',
+        marginTop: 60,
     },
     inputText: {
         border: '1.5px solid #f8f8f8',
@@ -71,8 +85,18 @@ const busStopGetter = (props) => {
                    search: "?code=" + props.busStopCode
                }}>
                    <Button className={classNames(classes.submitButton, className)}
-                           variant="text"
+                           variant="contained"
                            color="primary">SUBMIT</Button>
+               </Link>
+           </div>
+           <div className={cssmod.Nearby}>
+               <Link to={{
+                  pathname: "/nearby" 
+               }}>
+                   <Button variant="contained" className={classNames(classes.nearbyButton, className)}>
+                       <LocationOnIcon />
+                       Stops Nearby
+                   </Button>
                </Link>
            </div>
        </div>

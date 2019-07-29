@@ -1,0 +1,32 @@
+.Text {
+    font-family: 'Roboto', 'sans-serif';
+    color: #f0f0f0;
+    font-size: 16px;
+    font-style: bold;
+    text-align: center;
+}
+.GeoLoading {
+    position: relative;
+    top: 200px;
+}
+
+.Loading {
+    position: absolute;
+    padding-top: 15px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.NearestStopTitle {
+    font-family: 'Roboto', 'sans-serif';
+    color: #f0f0f0;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.NearestStopItems {
+    position: relative;
+    top: 80px;
+}

@@ -1,6 +1,6 @@
 .Logo {
     position: relative;
-    margin-top: 140px;
+    margin-top: 150px;
 }
 
 .BusStopGetter {
@@ -13,6 +13,11 @@
 }
 
 .Submit a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.Nearby a{
     color: inherit;
     text-decoration: none;
 }
