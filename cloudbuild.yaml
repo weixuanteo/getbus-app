@@ -4,4 +4,4 @@ steps:
   - name: 'gcr.io/cloud-builders/npm'
     args: ['run-script', 'build']
   - name: gcr.io/cloud-builders/gsutil
-    args: ['rsync', '-R', 'build', 'gs://getbus.wxuan.co']
+    args: ['rsync', '-R', 'build', 'gs://getbus.weixuan.dev']
